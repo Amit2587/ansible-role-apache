@@ -141,6 +141,6 @@ galaxy_info:
   #  - stretch
   #  - wheezy
 
-  galaxy_tags: ['apache's]
+  galaxy_tags: ['apache']
 
 dependencies: []
