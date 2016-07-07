@@ -2,4 +2,4 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - wahidsadik.ansible-role-apache
+    - ansible-role-apache

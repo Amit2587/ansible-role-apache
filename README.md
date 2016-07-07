@@ -3,7 +3,7 @@
 TBD
 ===
 
-- Galaxy
++ Galaxy
 - Testing it out
 - Update readme
   - Identify dependencies
