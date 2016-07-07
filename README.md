@@ -9,7 +9,8 @@ TBD
   - Identify dependencies
   - Examples
   - Requirements
-
++ Create GH repo
++ Travis integration
 
 Role Name
 =========
