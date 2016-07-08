@@ -18,9 +18,3 @@
     file path={{www_root}}
     owner={{www_user}} group={{www_group}} state=directory recurse=yes
   become: true
-
-- name: Put an apache2 config file to consider index.php
-  action: copy src=apache2.dir.conf dest=/etc/apache2/mods-available/dir.conf owner=root group=root mode=0644
-  become: true
-  notify:
-  - Restart apache2
