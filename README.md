@@ -3,14 +3,10 @@
 TBD
 ===
 
-+ Galaxy
-- Testing it out
 - Update readme
   - Identify dependencies
   - Examples
-  - Requirements
-+ Create GH repo
-+ Travis integration
+  - Requirements: Talk about the other compatible roles
 
 Role Name
 =========
