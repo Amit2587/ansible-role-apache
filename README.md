@@ -1,13 +1,5 @@
 [![Build Status](https://travis-ci.org/wahidsadik/ansible-role-apache.svg?branch=master)](https://travis-ci.org/wahidsadik/ansible-role-apache)
 
-TBD
-===
-
-- Update readme
-  - Identify dependencies
-  - Examples
-  - Requirements: Talk about the other compatible roles
-
 Role Name
 =========
 
@@ -25,7 +17,7 @@ To add this from your Ansible `requirements.yml`, add this to the file:
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+None
 
 Role Variables
 --------------
@@ -41,7 +33,6 @@ The role defines the following variables in `defaults/main.yml`:
 > - `www_user` **must belong** to `www_group` group.
 > - `www_user` **should not be** `root` user for security reasons.
 
-
 Users must pass the following parameters (i.e. variables):
 
 - None
@@ -49,27 +40,35 @@ Users must pass the following parameters (i.e. variables):
 Dependencies
 ------------
 
-The role depends on the following roles:
-
-- TBD
-- TBD
-
 The `remote_user` used run this role should be able change permission of directories and files usually owned by `root`. Hence, you will probably need to `sudo` to successfully run use this role. See examples for more details.
 
 Example Playbook
 ----------------
 
-Show examples of:
-
-- With simplest possible variables
-- With non-root user and in simplest possible variables
-- With non-root user with full (and if needed other combinations) variable sets
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+Example 1: Simplest example with minimum variable passing
 
     - hosts: servers
+      remote_user: root
       roles:
-         - { role: wahidsadik.ansible-role-apache, x: 42 }
+         - { role: wahidsadik.ansible-role-apache}
+
+Example 2: With sudo and minimum variable passing
+
+    - hosts: servers
+      remote_user: deployer
+      become: true
+      become_method: sudo
+      roles:
+      - { role: wahidsadik.ansible-role-apache }
+
+Example 3: Overriding additional variables
+
+    - hosts: servers
+      remote_user: deployer
+      become: true
+      become_method: sudo
+      roles:
+      - { role: wahidsadik.ansible-role-apache, www_root: /var/web, www_user: myuser, www_group: www}
 
 License
 -------
