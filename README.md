@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/wahidsadik/ansible-role-apache.svg?branch=master)](https://travis-ci.org/wahidsadik/ansible-role-apache)
-[![Galaxy](https://img.shields.io/badge/galaxy-ansible--role--apache-green.svg)](https://galaxy.ansible.com/wahidsadik/ansible-role-apache/)
+[![Galaxy](https://img.shields.io/badge/galaxy-ansible--role--apache-green.svg)](https://galaxy.ansible.com/wahidsadik/ansible-role-apache)
 
 Role Name
 =========
@@ -9,7 +9,7 @@ An Ansible role to install Apache with basic hardening.
 The role does these:
 
 - Install apache2
-- Change user/group ownership of `/var/www` to a non-root user.
+- Change user/group ownership of www-root-location to a non-root user.
 
 The role is available on Ansible Galaxy: [https://galaxy.ansible.com/wahidsadik/ansible-apache-role](https://galaxy.ansible.com/wahidsadik/ansible-role-apache).
 
