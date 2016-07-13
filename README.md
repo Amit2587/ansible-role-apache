@@ -1,9 +1,15 @@
 [![Build Status](https://travis-ci.org/wahidsadik/ansible-role-apache.svg?branch=master)](https://travis-ci.org/wahidsadik/ansible-role-apache)
+[![Galaxy](https://img.shields.io/badge/galaxy-ansible--role--apache-green.svg)](https://galaxy.ansible.com/wahidsadik/ansible-role-apache/)
 
 Role Name
 =========
 
 An Ansible role to install Apache with basic hardening.
+
+The role does these:
+
+- Install apache2
+- Change user/group ownership of `/var/www` to a non-root user.
 
 The role is available on Ansible Galaxy: [https://galaxy.ansible.com/wahidsadik/ansible-apache-role](https://galaxy.ansible.com/wahidsadik/ansible-role-apache).
 
@@ -24,9 +30,11 @@ Role Variables
 
 The role defines the following variables in `defaults/main.yml`:
 
-    www_root: /var/www
-    www_user: deployer
-    www_group: www-data
+Variable name|Default value|Comment
+-------------|-------------|-------
+`www_root` | `/var/www` |-
+`www_user` | `deployer` | -
+`www_group` | `www-data` | -
 
 >Notes:
 >
@@ -40,7 +48,7 @@ Users must pass the following parameters (i.e. variables):
 Dependencies
 ------------
 
-The `remote_user` used run this role should be able change permission of directories and files usually owned by `root`. Hence, you will probably need to `sudo` to successfully run use this role. See examples for more details.
+The `remote_user` needs to have `sudo` access or be `root` equivalent user.
 
 Example Playbook
 ----------------
@@ -78,6 +86,4 @@ MIT
 Author Information
 ------------------
 
-Wahid Sadik
-
-Repo: [https://github.com/wahidsadik/ansible-role-apache](https://github.com/wahidsadik/ansible-role-apache).
+Wahid Sadik. More at: [https://wahidsadik.github.io](https://wahidsadik.github.io).
