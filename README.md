@@ -58,7 +58,7 @@ Example 1: Simplest example with minimum variable passing
     - hosts: servers
       remote_user: root
       roles:
-         - { role: wahidsadik.ansible-role-apache}
+         - wahidsadik.ansible-role-apache
 
 Example 2: With sudo and minimum variable passing
 
@@ -67,7 +67,7 @@ Example 2: With sudo and minimum variable passing
       become: true
       become_method: sudo
       roles:
-      - { role: wahidsadik.ansible-role-apache }
+      - wahidsadik.ansible-role-apache
 
 Example 3: Overriding additional variables
 
@@ -76,7 +76,12 @@ Example 3: Overriding additional variables
       become: true
       become_method: sudo
       roles:
-      - { role: wahidsadik.ansible-role-apache, www_root: /var/web, www_user: myuser, www_group: www}
+      - {
+          role: wahidsadik.ansible-role-apache,
+          www_root: /var/web,
+          www_user: myuser,
+          www_group: www
+        }
 
 License
 -------
